@@ -1,0 +1,52 @@
+.footer {
+    .footer_links_course {
+        a {
+            color: #5D5A6F !important;
+            transition: .2s all;
+
+            &:hover {
+                color: #7c3aed !important;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .footer_links_community {
+        a {
+            color: #5D5A6F !important;
+            transition: .2s all;
+
+            &:hover {
+                color: #7c3aed !important;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .footer_links_quick {
+        a {
+            color: #5D5A6F !important;
+            transition: .2s all;
+
+            &:hover {
+                color: #E96036 !important;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    svg {
+        transition: .2s all;
+
+        &:hover {
+            fill: #e96036 !important;
+            padding: 0 !important;
+        }
+    }
+}
+
+.footer_copyright {
+    a {
+        color: #E96036 !important;
+    }
+}
