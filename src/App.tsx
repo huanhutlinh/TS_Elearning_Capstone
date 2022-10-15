@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Router history={history}>
-        <Suspense fallback={<Loading />}>
+        <Suspense>
           <Switch></Switch>
         </Suspense>
       </Router>
