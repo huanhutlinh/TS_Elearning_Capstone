@@ -3,6 +3,7 @@ import { Switch, Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Loading from "./components/Loading/loading";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import HomeTemplate from "./templates/HomeTemplate";
 
 export const history = createBrowserHistory();
 
