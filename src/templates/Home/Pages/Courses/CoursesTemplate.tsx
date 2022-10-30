@@ -1,10 +1,11 @@
 import { Fragment, useEffect, useState } from "react";
 import { Route } from "react-router";
-import Footer from "./Home/Layouts/footer";
-import SubMenuDropdown from "./Home/Components/Home/subMenuDropdown";
-import Navbar from "./Home/Layouts/navbar";
+import Footer from "../../Layouts/footer";
+import SubMenuDropdown from "../../Components/Home/subMenuDropdown";
+import Navbar from "../../Layouts/navbar";
+import React from 'react';
 
-export default function HomeTemplate(props: any) {
+export default function CoursesTemplate (props: any){
   const { Component, ...restProps } = props;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -42,4 +43,4 @@ export default function HomeTemplate(props: any) {
       }}
     />
   );
-}
+};
