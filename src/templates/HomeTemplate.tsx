@@ -1,8 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
 import { Route } from "react-router";
-import Footer from "./Layouts/footer";
-import Navbar from "./Layouts/navbar";
-import SubMenuDropdown from "./Components/Home/subMenuDropdown";
+import Footer from "./Home/Layouts/footer";
+
+import Navbar from "./Home/Layouts/navbar";
+import SubMenuDropdown from "./Home/Componets/Home/subMenuDropdown";
 
 export default function HomeTemplate(props: any) {
   const { Component, ...restProps } = props;
