@@ -5,7 +5,7 @@ import {
   GET_COURSES,
   GET_DETAILS_COURSES,
   GET_COURSES_EACH_CATEGORY,
-} from "./coursesType";
+} from "../types/coursesType";
 
 export const getCoursesAction = async (dispatch: any) => {
   try {
