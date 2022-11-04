@@ -55,7 +55,13 @@ function App() {
                 () => import("./templates/Home/Pages/UserPages/Profile")
               )}
             />
-
+            <HomeTemplate
+              path="/alert"
+              exact
+              Component={lazy(
+                () => import("./templates/PageNotFound/AlertPage")
+              )}
+            />
             <UserTemplate
               path="/signup"
               exact
@@ -70,7 +76,6 @@ function App() {
                 () => import("./templates/Home/Pages/UserPages/SignIn")
               )}
             />
-
             <CheckoutTemplate
               path="/checkout/:id"
               exact
