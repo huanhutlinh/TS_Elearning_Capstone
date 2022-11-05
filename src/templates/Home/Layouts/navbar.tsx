@@ -9,14 +9,15 @@ import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import { history } from "../../../App";
 import { TOKEN, USER_SIGNIN } from "../../../utilities/config";
-// import { fontSize } from "tailwindcss/defaultTheme";
 
 export default function Navbar({ toggle = () => {} }): JSX.Element {
   const { arrCateCourse } = useSelector(
     (state: any) => state.CategoryCoursesReducer
   );
 
-  const { userSignIn } = useSelector((state: any) => state.UserManagermentReducer);
+  const { userSignIn } = useSelector(
+    (state: any) => state.UserManagermentReducer
+  );
 
   const dispatch = useDispatch();
 
@@ -28,11 +29,6 @@ export default function Navbar({ toggle = () => {} }): JSX.Element {
   const { Option } = Select;
 
   const { t, i18n } = useTranslation();
-
-  // const handleChangeLanguges = (value) => {
-  //   i18n.changeLanguage(value);
-  // };
-
   const renderSignIn = () => {
     if (_.isEmpty(userSignIn)) {
       return (
@@ -81,7 +77,7 @@ export default function Navbar({ toggle = () => {} }): JSX.Element {
               <button
                 className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-right"
                 onClick={() => {
-                  history.push("/about");
+                  history.push("/profile");
                 }}
               >
                 Profile
@@ -143,7 +139,22 @@ export default function Navbar({ toggle = () => {} }): JSX.Element {
       <nav className="ml-3 sm:ml-5 flex justify-between items-center w-full bg-white text-black font-medium">
         <div className="lg:flex-none">
           <NavLink to="/">
-            <h1 style={{ fontSize: 30 }}>L-Elearning</h1>
+            <h1 style={{ fontSize: 40 }}>
+              <div>
+                <span style={{ color: "#FF0000" }}>L</span>
+                <span style={{ color: "#FF7F00" }}>H</span>
+                <span style={{ color: "#FFFF00" }}>-</span>
+                <span style={{ color: "#7FFF00" }}>E</span>
+                <span style={{ color: "#00FF00" }}>l</span>
+                <span style={{ color: "#00FF7F" }}>e</span>
+                <span style={{ color: "#00FEFF" }}>a</span>
+                <span style={{ color: "#007FFF" }}>r</span>
+                <span style={{ color: "#0000FF" }}>n</span>
+                <span style={{ color: "#7F00FF" }}>i</span>
+                <span style={{ color: "#FF00FE" }}>n</span>
+                <span style={{ color: "#FF007F" }}>g</span>
+              </div>
+            </h1>
           </NavLink>
         </div>
 
@@ -193,7 +204,7 @@ export default function Navbar({ toggle = () => {} }): JSX.Element {
     hover:shadow-lg transition-colors duration-200"
             to="/contact"
           >
-            { t("Liên hệ") }
+            {t("Liên hệ")}
           </NavLink>
         </div>
         {renderSignIn()}

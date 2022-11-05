@@ -87,14 +87,14 @@ export default function Courses(props: any) {
               </div>
             </div>
             <div className="flex justify-center">
-            <button
-              onClick={() => {
-                history.push(`/courses/${cateCourses.maDanhMuc}`);
-              }}
-              className="mb-12 sm:mb-32 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs sm:text-base p-3 sm:p-5 rounded-lg transition-colors"
-            >
-              Xem thêm lớp học
-            </button>
+              <button
+                onClick={() => {
+                  history.push(`/courses/${cateCourses.maDanhMuc}`);
+                }}
+                className="mb-12 sm:mb-32 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs sm:text-base p-3 sm:p-5 rounded-lg transition-colors"
+              >
+                Xem thêm lớp học
+              </button>
             </div>
           </div>
         </TabPane>

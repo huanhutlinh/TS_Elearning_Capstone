@@ -12,7 +12,7 @@ export default function HomeContent(props: any) {
       <CarouselHome />
       <div className="container mx-auto py-5 sm:py-16">
         <div className="heading text-center py-10 sm:py-14">
-          <h1 className="text-3xl px-10 sm:text-6xl font-bold py-3">
+          <h1 className="text-3xl px-10 sm:text-4xl font-bold py-3">
             Đào tạo nghề lập trình chuyên sâu từ ZERO
           </h1>
           <p className="text-base font-normal px-2 sm:px-80">
@@ -43,7 +43,7 @@ export default function HomeContent(props: any) {
           />
         </div>
         <div className="heading text-center py-14">
-          <h1 className="text-3xl sm:text-6xl font-bold py-3">
+          <h1 className="text-3xl sm:text-4xl font-bold py-3">
             Lộ trình và danh sách các khoá học
           </h1>
           <p className="text-lg font-normal px-2 mb-24 sm:px-80">
@@ -65,7 +65,7 @@ export default function HomeContent(props: any) {
         place-items-center rounded-3xl bg-gray-100"
         >
           <div className="place-self-auto px-5 sm:px-12">
-            <h2 className="text-3xl sm:text-6xl font-semibold leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold leading-tight">
               Học Online tại CyberLearn.vn
               <br />
             </h2>
@@ -93,13 +93,13 @@ export default function HomeContent(props: any) {
             <Lazyload>
               <img
                 className="w-11/12 sm:w-11/12"
-                src="./images/img.jpg"
+                src="./images/fullstack.jpeg"
                 alt=""
               />
             </Lazyload>
           </div>
           <div className="order-1 sm:order-2 px-1 sm:px-12 col-span-1">
-            <h2 className="sm:text-6xl text-3xl text-center sm:text-left font-semibold leading-tight">
+            <h2 className="sm:text-4xl text-3xl text-center sm:text-left font-semibold leading-tight">
               Thay đổi sự nghiệp
               <br />
               - Học lập trình theo lộ trình chuyên biệt tại

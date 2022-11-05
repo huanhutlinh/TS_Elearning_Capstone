@@ -21,7 +21,7 @@
   padding: 0 !important;
 }
 .instructor_social svg:hover {
-  fill: #e96036 !important;
+  fill: #7c3aed !important;
   padding: 0 !important;
 }
 .instructor--header {
@@ -74,9 +74,9 @@
 .google-login-btn:hover,
 .facebook-login-btn:hover,
 .github-login-btn:hover {
-  background-color: #e96036;
+  background-color: #7c3aed;
   color: #fff;
-  border-color: #e96036 !important;
+  border-color: #7c3aed !important;
 }
 
 .google-login-btn,
@@ -89,7 +89,7 @@
 }
 
 .google-login {
-  background-color: #e96036 !important;
+  background-color: #7c3aed !important;
   padding: 5px;
 }
 

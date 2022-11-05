@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         main: {
-          500: "#e96036",
+          500: "#7c3aed",
         },
       },
     },

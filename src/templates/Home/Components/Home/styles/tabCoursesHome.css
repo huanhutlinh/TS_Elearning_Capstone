@@ -1,49 +1,47 @@
-@media (max-width:639px){
+@media (max-width: 639px) {
   .ant-tabs-tab-btn,
   .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
-.ant-tabs-tab-btn:active,
-.ant-tabs-tab-btn:focus,
-.ant-tabs-tab-remove:focus,
-.ant-tabs-tab-remove:active,
- .ant-tabs-tab:hover {
- font-size: 14px;
-}
-.ant-tabs-tab:not(:first-child){
-  margin-left: 15px!important;
-}
-/* .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
+  .ant-tabs-tab-btn:active,
+  .ant-tabs-tab-btn:focus,
+  .ant-tabs-tab-remove:focus,
+  .ant-tabs-tab-remove:active,
+  .ant-tabs-tab:hover {
+    font-size: 14px;
+  }
+  .ant-tabs-tab:not(:first-child) {
+    margin-left: 15px !important;
+  }
+  /* .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
   overflow-x: scroll !important;
   margin: 50px 0 0px 0 !important;
   padding: 0 10px 23px 10px;
 } */
 
-/* .ant-tabs-nav {
+  /* .ant-tabs-nav {
   overflow-x: scroll !important;
   margin: 50px 0 0px 0 !important;
   padding-bottom:30px;
 } */
 
-/* .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap::-webkit-scrollbar {
+  /* .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap::-webkit-scrollbar {
   -webkit-appearance: none;
   height:3px;
   background: rgb(226, 226, 226);
 }
 .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap::-webkit-scrollbar-thumb {
-  background: #e96036;
-  border: 1px solid #e96036;
+  background: #7c3aed;
+  border: 1px solid #7c3aed;
   border-radius: 5px;
 }
 .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap::-webkit-scrollbar-thumb:hover {
   background: #fc9576;
 } */
-
 }
 .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
   /* overflow-x: visible !important; */
   /* margin: 50px 0 0px 0 !important;*/
   padding: 0 10px 23px 10px;
 }
-
 
 .ant-tabs-tab {
   font-size: 20px !important;
@@ -58,7 +56,7 @@
 }
 .ant-tabs-tab.ant-tabs-tab-active,
 .ant-tabs-tab:hover {
-  background-color: #e96036 !important;
+  background-color: #7c3aed !important;
   padding: 10px 20px !important;
   border-radius: 8px !important;
   border: none !important;
@@ -72,10 +70,9 @@
 .ant-tabs-tab-btn:focus,
 .ant-tabs-tab-remove:focus,
 .ant-tabs-tab-remove:active,
- .ant-tabs-tab:hover {
+.ant-tabs-tab:hover {
   color: #fff !important;
 }
-
 
 h2.courses_tab_home_heading {
   min-height: 70px !important;

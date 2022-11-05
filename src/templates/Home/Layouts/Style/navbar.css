@@ -1,5 +1,5 @@
 :root {
-  --maincolor: #e96036;
+  --maincolor: #7c3aed;
 }
 @media (max-width: 639px) {
   #user-menu ~ #user-menu-dropdown {

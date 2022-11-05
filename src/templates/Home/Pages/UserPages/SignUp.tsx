@@ -1,6 +1,5 @@
-
 import React, { Fragment } from "react";
-import { Modal} from 'antd';
+import { Modal } from "antd";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./../Style/StylePages.css";
@@ -10,24 +9,23 @@ import { signUpAction } from "../../../../redux/actions/userManagermentAction";
 import { GROUPID } from "../../../../utilities/config";
 
 export default function Signup() {
-  
-  const countDown = () =>{
-  let secondsToGo = 5;
-  const modal = Modal.success({
-    title: 'Đăng ký tài khoản thành công',
-    content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
-  });
-  const timer = setInterval(() => {
-    secondsToGo -= 1;
-    modal.update({
+  const countDown = () => {
+    let secondsToGo = 5;
+    const modal = Modal.success({
+      title: "Đăng ký tài khoản thành công",
       content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
     });
-  }, 1000);
-  setTimeout(() => {
-    clearInterval(timer);
-    modal.destroy();
-  }, secondsToGo * 1000);
-}
+    const timer = setInterval(() => {
+      secondsToGo -= 1;
+      modal.update({
+        content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
+      });
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(timer);
+      modal.destroy();
+    }, secondsToGo * 1000);
+  };
 
   const dispatch = useDispatch();
 
@@ -48,7 +46,9 @@ export default function Signup() {
       matKhau: Yup.string().required("Required!"),
       hoTen: Yup.string().required("Required!"),
       soDT: Yup.string().required("Required!"),
-      email: Yup.string().email("Email đúng định dạng phải là email@email.com").required("Required!"),
+      email: Yup.string()
+        .email("Email đúng định dạng phải là email@email.com")
+        .required("Required!"),
     }),
     onSubmit: (values) => {
       dispatch(signUpAction(values, countDown));
@@ -71,7 +71,7 @@ export default function Signup() {
                 name="taiKhoan"
                 value={formik.values.taiKhoan}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-purple-500"
               />
 
               {formik.errors.taiKhoan && formik.touched.taiKhoan && (
@@ -89,7 +89,7 @@ export default function Signup() {
                 name="matKhau"
                 value={formik.values.matKhau}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-purple-500"
               />
               {formik.errors.matKhau && formik.touched.matKhau && (
                 <p className="text-red-600">{formik.errors.matKhau}</p>
@@ -105,7 +105,7 @@ export default function Signup() {
                 name="hoTen"
                 value={formik.values.hoTen}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-purple-500"
               />
               {formik.errors.hoTen && formik.touched.hoTen && (
                 <p className="text-red-600">{formik.errors.hoTen}</p>
@@ -121,7 +121,7 @@ export default function Signup() {
                 name="soDT"
                 value={formik.values.soDT}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-purple-500"
               />
               {formik.errors.soDT && formik.touched.soDT && (
                 <p className="text-red-600">{formik.errors.soDT}</p>
@@ -137,7 +137,7 @@ export default function Signup() {
                 name="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-purple-500"
               />
               {formik.errors.email && formik.touched.email && (
                 <p className="text-red-600">{formik.errors.email}</p>
@@ -149,7 +149,6 @@ export default function Signup() {
                   Mã nhóm: {GROUPID}
                 </div>
               </div>
-           
             </div>
 
             <div className="mt-10">
@@ -157,7 +156,7 @@ export default function Signup() {
                 className="text-gray-100 p-4 w-full rounded-full tracking-wide
                           font-semibold font-display focus:outline-none focus:shadow-outline
                           shadow-lg"
-                style={{ backgroundColor: "#E96036" }}
+                style={{ backgroundColor: "#7c3aed" }}
               >
                 Đăng ký
               </button>
@@ -171,7 +170,7 @@ export default function Signup() {
                   history.push("/signin");
                 }}
                 className="cursor-pointer"
-                style={{ color: "#E96036" }}
+                style={{ color: "#7c3aed" }}
               >
                 Đăng nhập
               </button>
