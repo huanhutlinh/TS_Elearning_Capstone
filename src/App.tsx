@@ -9,6 +9,7 @@ import CheckoutTemplate from "./templates/CheckoutTemplate/CheckoutTemplate";
 import CoursesTemplate from "./templates/Home/Pages/Courses/CoursesTemplate";
 import Dashboard from "./templates/Admin/Pages/Dashboard";
 import AdminTemplate from "./templates/Admin/AdminTemplate";
+import Courses from "./templates/Admin/Pages/Courses";
 export const history = createBrowserHistory();
 
 function App() {
@@ -86,6 +87,8 @@ function App() {
               )}
             />
             <AdminTemplate path="/admin" exact Component={Dashboard} />
+            <AdminTemplate path="/admin/dasboard" exact Component={Dashboard} />
+            <AdminTemplate path="/admin/courses" exact Component={Courses} />
           </Switch>
         </Suspense>
       </Router>
