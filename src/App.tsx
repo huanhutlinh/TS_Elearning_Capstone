@@ -7,7 +7,8 @@ import UserTemplate from "./templates/UserTemplate/UserTemplate";
 import HomeTemplate from "./templates/Home/HomeTemplate";
 import CheckoutTemplate from "./templates/CheckoutTemplate/CheckoutTemplate";
 import CoursesTemplate from "./templates/Home/Pages/Courses/CoursesTemplate";
-
+import Dashboard from "./templates/Admin/Pages/Dashboard";
+import AdminTemplate from "./templates/Admin/AdminTemplate";
 export const history = createBrowserHistory();
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
                   import("./templates/CheckoutTemplate/CheckoutPage/checkout")
               )}
             />
+            <AdminTemplate path="/admin" exact Component={Dashboard} />
           </Switch>
         </Suspense>
       </Router>
