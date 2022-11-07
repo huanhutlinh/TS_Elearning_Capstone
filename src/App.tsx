@@ -13,6 +13,8 @@ import Courses from "./templates/Admin/Pages/Courses";
 import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
 import EditCourse from "./templates/Admin/Pages/Courses/editCourse";
 import Users from "./templates/Admin/Pages/Users/Users";
+import addNewUser from "./templates/Admin/Pages/Users/addNewUser";
+
 export const history = createBrowserHistory();
 
 function App() {
@@ -103,6 +105,11 @@ function App() {
               Component={EditCourse}
             />
             <AdminTemplate path="/admin/users" exact Component={Users} />
+            <AdminTemplate
+              path="/admin/users/add-new"
+              exact
+              Component={addNewUser}
+            />
           </Switch>
         </Suspense>
       </Router>

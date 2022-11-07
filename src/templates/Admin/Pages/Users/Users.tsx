@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import AddNewUsers from "./addNewUser";
 import {
   deleteUserAction,
   getUserListAction,
@@ -176,6 +177,12 @@ export default function User() {
               dataSource={data}
               onChange={onChange}
               rowKey={"taiKhoan"}
+            />
+            <AddNewUsers
+              show={showForm}
+              close={handleCloseForm}
+              capNhat={capNhat}
+              type={typeAction}
             />
           </div>
         </div>
