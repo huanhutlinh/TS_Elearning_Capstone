@@ -10,6 +10,8 @@ import CoursesTemplate from "./templates/Home/Pages/Courses/CoursesTemplate";
 import Dashboard from "./templates/Admin/Pages/Dashboard";
 import AdminTemplate from "./templates/Admin/AdminTemplate";
 import Courses from "./templates/Admin/Pages/Courses";
+import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
+
 export const history = createBrowserHistory();
 
 function App() {
@@ -89,6 +91,11 @@ function App() {
             <AdminTemplate path="/admin" exact Component={Dashboard} />
             <AdminTemplate path="/admin/dasboard" exact Component={Dashboard} />
             <AdminTemplate path="/admin/courses" exact Component={Courses} />
+            <AdminTemplate
+              path="/admin/courses/add-new"
+              exact
+              Component={AddNewCourses}
+            />
           </Switch>
         </Suspense>
       </Router>
