@@ -11,7 +11,7 @@ import Dashboard from "./templates/Admin/Pages/Dashboard";
 import AdminTemplate from "./templates/Admin/AdminTemplate";
 import Courses from "./templates/Admin/Pages/Courses";
 import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
-
+import EditCourse from "./templates/Admin/Pages/Courses/editCourse";
 export const history = createBrowserHistory();
 
 function App() {
@@ -95,6 +95,11 @@ function App() {
               path="/admin/courses/add-new"
               exact
               Component={AddNewCourses}
+            />
+            <AdminTemplate
+              path="/admin/courses/edit/:id"
+              exact
+              Component={EditCourse}
             />
           </Switch>
         </Suspense>
