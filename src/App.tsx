@@ -12,6 +12,7 @@ import AdminTemplate from "./templates/Admin/AdminTemplate";
 import Courses from "./templates/Admin/Pages/Courses";
 import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
 import EditCourse from "./templates/Admin/Pages/Courses/editCourse";
+import Users from "./templates/Admin/Pages/Users/Users";
 export const history = createBrowserHistory();
 
 function App() {
@@ -101,6 +102,7 @@ function App() {
               exact
               Component={EditCourse}
             />
+            <AdminTemplate path="/admin/users" exact Component={Users} />
           </Switch>
         </Suspense>
       </Router>
