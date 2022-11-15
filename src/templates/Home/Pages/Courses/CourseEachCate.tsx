@@ -8,7 +8,9 @@ import { getCoursesEachCateActions } from "../../../../redux/actions/coursesActi
 import "./../Style/StyleCourses.css";
 
 export default function CourseEachCate(props: any) {
-  const { arrCourseEachCate } = useSelector((state: any) => state.CoursesReducer);
+  const { arrCourseEachCate } = useSelector(
+    (state: any) => state.CoursesReducer
+  );
 
   const dispatch = useDispatch();
   const location = useLocation();
@@ -22,6 +24,7 @@ export default function CourseEachCate(props: any) {
   useEffect(() => {
     let { cate } = props.match.params;
     dispatch(getCoursesEachCateActions(cate));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.key]);
 
   const renderCourses = () => {
@@ -29,52 +32,54 @@ export default function CourseEachCate(props: any) {
       <div className="text-gray-600 body-font flex flex-col items-center">
         <div className="container mb-8 lg:mb-12 sm:mb-0 py-8 sm:py-16 px-3 mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 lg:-m-4">
-            {arrCourseEachCate?.slice(0, loadMore).map((course: any, index: number) => {
-              return (
-                <div
-                  key={index}
-                  className="courses-each-cate relative lg:mb-12 mx-2 lg:mx-5 px-6 py-12 bg-white rounded-md lg:rounded-3xl shadow-xl"
-                >
-                  <div className="absolute top-0 left-0"></div>
-                  <p className="rounded-md lg:rounded-lg mb-4 text-center text-purple-700 bg-indigo-100 py-2 px-3 w-fit text-xs">
-                    {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
-                  </p>
-                  <div className="text-center">
-                    <LazyLoad height={200}>
-                      <img
-                        alt={course?.tenKhoaHoc}
-                        className="w-full mb-8 object-cover object-center rounded-lg inline-block"
-                        style={{
-                          maxHeight: "150px",
-                          minHeight: "150px",
-                          border: "1px solid #eee",
-                        }}
-                        src={course?.hinhAnh}
-                      />
-                    </LazyLoad>
-                    <h2 className="courses-each-cate-heading text-lg sm:text-3xl font-bold">
-                      {course?.tenKhoaHoc}
-                    </h2>
-                    <p className="courses-each-cate-description text-sm sm:text-lg text-gray-500 leading-relaxed">
-                      {course?.moTa?.length > 100 ? (
-                        <span>{course?.moTa?.slice(0, 90)}...</span>
-                      ) : (
-                        <span>{course.moTa}</span>
-                      )}
+            {arrCourseEachCate
+              ?.slice(0, loadMore)
+              .map((course: any, index: number) => {
+                return (
+                  <div
+                    key={index}
+                    className="courses-each-cate relative lg:mb-12 mx-2 lg:mx-5 px-6 py-12 bg-white rounded-md lg:rounded-3xl shadow-xl"
+                  >
+                    <div className="absolute top-0 left-0"></div>
+                    <p className="rounded-md lg:rounded-lg mb-4 text-center text-purple-700 bg-indigo-100 py-2 px-3 w-fit text-xs">
+                      {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
                     </p>
-                    <div
-                      onClick={() => {
-                        history.push(`/courses/detail/${course.maKhoaHoc}`);
-                      }}
-                      className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-purple-700 text-purple-700 bg-white hover:text-white hover:bg-purple-700 
+                    <div className="text-center">
+                      <LazyLoad height={200}>
+                        <img
+                          alt={course?.tenKhoaHoc}
+                          className="w-full mb-8 object-cover object-center rounded-lg inline-block"
+                          style={{
+                            maxHeight: "150px",
+                            minHeight: "150px",
+                            border: "1px solid #eee",
+                          }}
+                          src={course?.hinhAnh}
+                        />
+                      </LazyLoad>
+                      <h2 className="courses-each-cate-heading text-lg sm:text-3xl font-bold">
+                        {course?.tenKhoaHoc}
+                      </h2>
+                      <p className="courses-each-cate-description text-sm sm:text-lg text-gray-500 leading-relaxed">
+                        {course?.moTa?.length > 100 ? (
+                          <span>{course?.moTa?.slice(0, 90)}...</span>
+                        ) : (
+                          <span>{course.moTa}</span>
+                        )}
+                      </p>
+                      <div
+                        onClick={() => {
+                          history.push(`/courses/detail/${course.maKhoaHoc}`);
+                        }}
+                        className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-purple-700 text-purple-700 bg-white hover:text-white hover:bg-purple-700 
                         lg:font-semibold text-sm sm:text-base px-5 py-3 rounded-lg transition-colors"
-                    >
-                      Chi tiết khoá học
+                      >
+                        Chi tiết khoá học
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </div>
         <div>
@@ -84,7 +89,7 @@ export default function CourseEachCate(props: any) {
             }}
             className="mb-14 lg:mb-32 w-fit bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm sm:text-base p-5 rounded-lg transition-colors"
           >
-            Xem thêm 
+            Xem thêm
           </button>
         </div>
       </div>

@@ -26,6 +26,7 @@ export default function DetailsCourse(props: any) {
     dispatch(getDetailsCoursesAction(id));
     dispatch(getCateCoursesAction);
     dispatch(getCoursesAction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.key]);
 
   const renderSimilarCourse = () => {
@@ -102,10 +103,9 @@ export default function DetailsCourse(props: any) {
           <h1 className="text-2xl lg:text-5xl font-bold mt-0 lg:mt-6">
             {courseDetail.tenKhoaHoc}
           </h1>
-          <img src={courseDetail?.hinhAnh} />
+          <img src={courseDetail?.hinhAnh} alt="..." />
         </div>
-        {/* <VideoCoursesDetail /> */}
-        
+
         <div className=" mx-3 mt-8 lg:mt-24 grid lg:grid-flow-col lg:grid-cols-12 gap-4">
           <div className="img_collegeLevel_home col-span-12 lg:col-span-9">
             <h2 className="font-body text-2xl lg:text-5xl mb-3 lg:mb-10 font-bold leading-tight">
@@ -130,8 +130,9 @@ export default function DetailsCourse(props: any) {
                 <p className="text-black underline">
                   {courseDetail?.nguoiTao?.hoTen}
                 </p>
-                <div className="block"
-                //  style={{padding: "5px 0 15px 0"}}
+                <div
+                  className="block"
+                  //  style={{padding: "5px 0 15px 0"}}
                 >
                   <RatingsDetailsCourse />
                 </div>
@@ -154,7 +155,9 @@ export default function DetailsCourse(props: any) {
           <h2 className="text-2xl lg:text-5xl mt-14 mb-10 font-bold leading-tight">
             Các khoá học liên quan
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 -m-4">{renderSimilarCourse()}</div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 -m-4">
+            {renderSimilarCourse()}
+          </div>
         </div>
       </div>
     </Fragment>

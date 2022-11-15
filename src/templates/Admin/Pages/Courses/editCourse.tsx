@@ -4,7 +4,6 @@ import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getDetailsCoursesEditAction,
-  updateCourseAction,
   capNhatKhoaHocAction,
 } from "../../../../redux/actions/coursesAdminActions";
 import { GROUPID } from "../../../../utilities/config";
@@ -23,6 +22,7 @@ export default function EditCourse(props: any) {
     let { id } = props.match.params;
 
     dispatch(getDetailsCoursesEditAction(id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const formik = useFormik({

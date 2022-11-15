@@ -23,6 +23,7 @@ export default function Courses(props: any) {
   useEffect(() => {
     dispatch(getCateCoursesAction);
     dispatch(getCoursesAction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const { TabPane } = Tabs;

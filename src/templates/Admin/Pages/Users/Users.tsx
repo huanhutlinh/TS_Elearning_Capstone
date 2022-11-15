@@ -1,12 +1,8 @@
 import React, { Fragment } from "react";
 import "./../../style/StyleAdmin.css";
-import { PencilAltIcon, SearchIcon, TrashIcon } from "@heroicons/react/outline";
+import { TrashIcon } from "@heroicons/react/outline";
 import { Button, Input, Table } from "antd";
-import {
-  EditOutlined,
-  SearchOutlined,
-  DeleteOutlined,
-} from "@ant-design/icons";
+import { EditOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import AddNewUsers from "./addNewUser";
@@ -23,13 +19,13 @@ export default function User() {
   const [capNhat, setCapNhat] = useState({ capNhat: [] });
   const [typeAction, setTypeAction] = useState("update");
   const handleCloseForm = () => setShowForm(false);
-  const [q, setQ] = useState("");
   const dispatch = useDispatch();
 
   const { Search } = Input;
 
   useEffect(() => {
     dispatch(getUserListAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const columns: any = [
@@ -152,7 +148,7 @@ export default function User() {
             <Button
               type="primary"
               style={{ width: 150 }}
-              className="mb-4 ant-btn ant-btn-primary mb-4 ant-btn bg-purple-6 mb-4 nav-links mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black  hover:shadow-lg transition-colors duration-200 active"
+              className="my-4"
               onClick={() => {
                 setTypeAction("insert");
                 setShowForm(true);

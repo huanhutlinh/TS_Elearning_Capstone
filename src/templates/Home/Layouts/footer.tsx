@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import LazyLoad from "react-lazyload";
 import "./Style/footer.css";
 import { getCateCoursesAction } from "../../../redux/actions/coursesActions";
 import { Link } from "react-router-dom";
@@ -13,6 +12,7 @@ export default function Footer() {
 
   useEffect(() => {
     dispatch(getCateCoursesAction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderCateCourses = () => {

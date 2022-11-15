@@ -5,9 +5,6 @@ import { Fragment } from "react";
 import {
   DotsHorizontalIcon,
   AcademicCapIcon,
-  CalendarIcon,
-  FolderIcon,
-  HomeIcon,
   PlusCircleIcon,
   UsersIcon,
 } from "@heroicons/react/outline";

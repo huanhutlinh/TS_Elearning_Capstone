@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./../../Admin/style/StyleAdmin.css";
-import { PencilAltIcon, SearchIcon, TrashIcon } from "@heroicons/react/outline";
+import { PencilAltIcon, TrashIcon } from "@heroicons/react/outline";
 import { Button, Input, Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -11,12 +11,10 @@ import {
 import { Link } from "react-router-dom";
 import { history } from "../../../App";
 
-// export default function Courses({ tenKhoaHoc }) {
 export default function Courses() {
   const { arrCoursesAdmin } = useSelector(
     (state: any) => state.CoursesAdminReducer
   );
-  // const { arrCoursesAdminDefault } = useSelector((state) => state.CoursesAdminReducer);
 
   const dispatch = useDispatch();
   console.log("arrCoursesAdmin", arrCoursesAdmin);
@@ -24,6 +22,7 @@ export default function Courses() {
 
   useEffect(() => {
     dispatch(getCoursesAdminAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const columns: any = [
@@ -174,7 +173,7 @@ export default function Courses() {
             <Button
               type="primary"
               style={{ width: 150 }}
-              className="mb-4 ant-btn bg-purple-6 mb-4 nav-links mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black  hover:shadow-lg transition-colors duration-200 active"
+              className="my-4"
               onClick={() => {
                 history.push("/admin/courses/add-new");
               }}

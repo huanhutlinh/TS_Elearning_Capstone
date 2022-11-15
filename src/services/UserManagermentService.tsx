@@ -2,6 +2,7 @@ import { GROUPID } from "../utilities/config";
 import { baseService } from "./baseService";
 
 export class UserManagermentService extends baseService {
+  // eslint-disable-next-line
   constructor() {
     super();
   }
@@ -17,11 +18,11 @@ export class UserManagermentService extends baseService {
   getUserList = (tuKhoa: string) => {
     if (tuKhoa.trim() !== "") {
       return this.get(
-          `/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${GROUPID}&tuKhoa=${tuKhoa}`
-          );
-        }
-        return this.get(
-        `/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${GROUPID}`
+        `/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${GROUPID}&tuKhoa=${tuKhoa}`
+      );
+    }
+    return this.get(
+      `/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${GROUPID}`
     );
   };
 
@@ -29,18 +30,19 @@ export class UserManagermentService extends baseService {
     return this.get(`/api/QuanLyNguoiDung/ThongTinTaiKhoan/${id}`);
   };
 
-  deleteUser = (taiKhoan: string)=>{
-      return this.delete(`/api/QuanLyNguoiDung/XoaNguoiDung?taiKhoan=${taiKhoan}`)
-  }
+  deleteUser = (taiKhoan: string) => {
+    return this.delete(
+      `/api/QuanLyNguoiDung/XoaNguoiDung?taiKhoan=${taiKhoan}`
+    );
+  };
 
-  addUser = (formData: any) =>{
-    return this.post(`/api/QuanLyNguoiDung/ThemNguoiDung`,formData);
-  }
+  addUser = (formData: any) => {
+    return this.post(`/api/QuanLyNguoiDung/ThemNguoiDung`, formData);
+  };
 
   updateUser = (formData: any) => {
-    return this.put(`/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`,formData);
-}
-
+    return this.put(`/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`, formData);
+  };
 }
 
 export const userManagermentService = new UserManagermentService();

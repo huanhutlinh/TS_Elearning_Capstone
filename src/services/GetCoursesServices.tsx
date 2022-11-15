@@ -2,7 +2,7 @@ import { GROUPID } from "../utilities/config";
 import { baseService } from "./baseService";
 
 export class GetCoursesServices extends baseService {
-  // eslint-disable-next-line no-useless-constructor
+  // eslint-disable-next-line
   constructor() {
     super();
   }
@@ -11,10 +11,11 @@ export class GetCoursesServices extends baseService {
     return this.get(`/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=${GROUPID}`);
   };
   getCoursesAdmin = (tenKhoaHoc: string) => {
-    if (tenKhoaHoc.trim() !== ''){
-    return this.get(
-      `/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?tenKhoaHoc=${tenKhoaHoc}&MaNhom=${GROUPID}`
-    )}
+    if (tenKhoaHoc.trim() !== "") {
+      return this.get(
+        `/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?tenKhoaHoc=${tenKhoaHoc}&MaNhom=${GROUPID}`
+      );
+    }
     return this.get(`/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=${GROUPID}`);
   };
 
@@ -32,9 +33,9 @@ export class GetCoursesServices extends baseService {
     return this.post(`/api/QuanLyKhoaHoc/ThemKhoaHocUploadHinh`, formData);
   };
 
-  capNhatKhoaHoc = (formData: any)=>{
-    return this.put(`/api/QuanLyKhoaHoc/CapNhatKhoaHoc`,formData);
-  }
+  capNhatKhoaHoc = (formData: any) => {
+    return this.put(`/api/QuanLyKhoaHoc/CapNhatKhoaHoc`, formData);
+  };
 
   updateCourseUpload = (formData: any) => {
     return this.post(`/api/QuanLyKhoaHoc/CapNhatKhoaHocUpload`, formData);

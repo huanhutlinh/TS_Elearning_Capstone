@@ -4,7 +4,6 @@ import { NavLink, Link } from "react-router-dom";
 import "./Style/navbar.css";
 import { getCateCoursesAction } from "../../../redux/actions/coursesActions";
 import SignInModal from "../Pages/SignInModal/SignInModal";
-import { Select } from "antd";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import { history } from "../../../App";
@@ -23,12 +22,12 @@ export default function Navbar({ toggle = () => {} }): JSX.Element {
 
   useEffect(() => {
     dispatch(getCateCoursesAction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [showModal, setShowModal] = useState(false);
-  const { Option } = Select;
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const renderSignIn = () => {
     if (_.isEmpty(userSignIn)) {
       return (
